@@ -1,27 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
-    content="Thiranex Portfolio - A responsive and accessible portfolio website."
+    content="Thiranex responsive portfolio website with interactive task management application."
   >
 
   <meta
     name="keywords"
-    content="portfolio, web developer, Thiranex, HTML, CSS, JavaScript"
+    content="Thiranex, portfolio, web development, JavaScript, responsive design, todo list"
   >
 
   <meta name="author" content="Thiranex">
 
-  <title>Thiranex Portfolio</title>
+  <title>Thiranex | Portfolio</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -47,30 +42,15 @@
 
       <!-- Navigation Links -->
       <ul id="nav-menu">
-
-        <li>
-          <a href="#home">Home</a>
-        </li>
-
-        <li>
-          <a href="#about">About</a>
-        </li>
-
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#tasks">Tasks</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <!-- Theme Button -->
+      <!-- Theme Toggle -->
       <button
         id="theme-toggle"
         aria-label="Toggle dark mode"
@@ -90,18 +70,21 @@
 
       <div class="hero-content">
 
+        <p class="hero-subtitle">
+          Welcome to my portfolio
+        </p>
+
         <h1>
-          Welcome to My Portfolio
+          Hello, I'm a Web Developer
         </h1>
 
         <p>
-          I am a passionate developer interested in
-          creating modern, responsive and accessible
-          web experiences.
+          I create responsive and user-friendly web experiences
+          using modern web technologies.
         </p>
 
         <a href="#projects" class="btn">
-          View My Projects
+          View Projects
         </a>
 
       </div>
@@ -112,26 +95,23 @@
     <!-- About Section -->
     <section id="about">
 
-      <div class="about-content">
+      <h2>About Me</h2>
 
-        <h2>About Me</h2>
+      <div class="about-grid">
 
-        <p>
-          I am a passionate learner and developer who
-          enjoys building responsive and user-friendly
-          websites using modern web technologies.
-        </p>
+        <div>
+          <p>
+            I am passionate about web development and building
+            interactive digital experiences.
+          </p>
+        </div>
 
-      </div>
-
-      <div class="about-content">
-
-        <h2>My Goal</h2>
-
-        <p>
-          My goal is to continuously improve my technical
-          skills and create meaningful digital solutions.
-        </p>
+        <div>
+          <p>
+            I enjoy learning new technologies and creating
+            responsive applications.
+          </p>
+        </div>
 
       </div>
 
@@ -141,32 +121,28 @@
     <!-- Skills Section -->
     <section id="skills">
 
-      <h2>My Skills</h2>
+      <h2>Skills</h2>
 
-      <div class="skills-container">
+      <div class="skills-grid">
 
-        <div class="skill">
-          <h3>HTML5</h3>
+        <div class="skill-card">
+          <h3>HTML</h3>
+          <p>Semantic and accessible web structure.</p>
         </div>
 
-        <div class="skill">
-          <h3>CSS3</h3>
+        <div class="skill-card">
+          <h3>CSS</h3>
+          <p>Responsive layouts using modern CSS.</p>
         </div>
 
-        <div class="skill">
+        <div class="skill-card">
           <h3>JavaScript</h3>
+          <p>Interactive and dynamic web applications.</p>
         </div>
 
-        <div class="skill">
-          <h3>Responsive Design</h3>
-        </div>
-
-        <div class="skill">
-          <h3>Git & GitHub</h3>
-        </div>
-
-        <div class="skill">
-          <h3>Web Accessibility</h3>
+        <div class="skill-card">
+          <h3>React</h3>
+          <p>Component-based frontend development.</p>
         </div>
 
       </div>
@@ -177,56 +153,119 @@
     <!-- Projects Section -->
     <section id="projects">
 
-      <h2>My Projects</h2>
+      <h2>Projects</h2>
 
-      <div class="projects-container">
-
-        <article class="project-card">
-
-          <h3>Project One</h3>
-
-          <p>
-            A responsive web project created using
-            modern HTML and CSS techniques.
-          </p>
-
-          <a href="#" class="btn">
-            View Project
-          </a>
-
-        </article>
-
+      <div class="projects-grid">
 
         <article class="project-card">
-
-          <h3>Project Two</h3>
-
+          <h3>Portfolio Website</h3>
           <p>
-            A user-friendly web application designed
-            with responsive layouts.
+            A responsive personal portfolio website built
+            using HTML, CSS and JavaScript.
           </p>
-
-          <a href="#" class="btn">
-            View Project
-          </a>
-
         </article>
-
 
         <article class="project-card">
-
-          <h3>Project Three</h3>
-
+          <h3>Job Board</h3>
           <p>
-            A modern portfolio project demonstrating
-            CSS Grid, Flexbox and responsive design.
+            A web application for searching and managing
+            job opportunities.
           </p>
-
-          <a href="#" class="btn">
-            View Project
-          </a>
-
         </article>
+
+        <article class="project-card">
+          <h3>Task Manager</h3>
+          <p>
+            An interactive JavaScript task management
+            application.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEW: To-Do List Section -->
+    <section id="tasks">
+
+      <h2>My Tasks</h2>
+
+      <p class="section-description">
+        Manage your daily tasks efficiently.
+      </p>
+
+      <div class="todo-container">
+
+        <!-- Add Task -->
+        <form id="todo-form">
+
+          <label for="todo-input">
+            Add a new task
+          </label>
+
+          <div class="todo-input-group">
+
+            <input
+              type="text"
+              id="todo-input"
+              placeholder="Enter your task..."
+              autocomplete="off"
+              required
+            >
+
+            <button type="submit" id="add-task">
+              Add Task
+            </button>
+
+          </div>
+
+        </form>
+
+
+        <!-- Task Filters -->
+        <div class="todo-filters" aria-label="Task filters">
+
+          <button
+            type="button"
+            class="filter-btn active"
+            data-filter="all"
+          >
+            All
+          </button>
+
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="active"
+          >
+            Active
+          </button>
+
+          <button
+            type="button"
+            class="filter-btn"
+            data-filter="completed"
+          >
+            Completed
+          </button>
+
+        </div>
+
+
+        <!-- Task List -->
+        <ul
+          id="todo-list"
+          class="todo-list"
+          aria-live="polite"
+        >
+        </ul>
+
+
+        <!-- Task Count -->
+        <p id="task-count" class="task-count">
+          0 tasks
+        </p>
 
       </div>
 
@@ -238,47 +277,57 @@
 
       <h2>Contact Me</h2>
 
-      <form>
+      <form id="contact-form">
 
-        <label for="name">
-          Name
-        </label>
+        <div class="form-group">
 
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Enter your name"
-          required
-        >
+          <label for="name">
+            Name
+          </label>
 
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+          >
 
-        <label for="email">
-          Email
-        </label>
-
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          required
-        >
+        </div>
 
 
-        <label for="message">
-          Message
-        </label>
+        <div class="form-group">
 
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Enter your message"
-          required
-        ></textarea>
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          >
+
+        </div>
 
 
-        <button type="submit">
+        <div class="form-group">
+
+          <label for="message">
+            Message
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <button type="submit" class="btn">
           Send Message
         </button>
 
@@ -304,4 +353,3 @@
 
 </body>
 </html>
-```

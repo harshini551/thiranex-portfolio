@@ -1,44 +1,40 @@
+/* =========================
+   CSS VARIABLES
+========================= */
+
 :root {
   --bg-color: #ffffff;
-  --section-bg: #f5f7fb;
+  --section-bg: #f8fafc;
   --card-bg: #ffffff;
-
-  --text-color: #222222;
-  --secondary-text: #666666;
-
+  --text-color: #111827;
+  --secondary-text: #6b7280;
   --primary-color: #4f46e5;
-  --primary-hover: #3730a3;
-
-  --border-color: #dddddd;
-
+  --primary-hover: #4338ca;
+  --border-color: #e5e7eb;
   --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
-  --radius: 12px;
-
+  --radius: 10px;
   --transition: 0.3s ease;
 }
 
-
-
+/* =========================
+   DARK MODE
+========================= */
 
 body.dark-mode {
   --bg-color: #111827;
   --section-bg: #1f2937;
   --card-bg: #273449;
-
   --text-color: #ffffff;
   --secondary-text: #d1d5db;
-
   --primary-color: #818cf8;
   --primary-hover: #a5b4fc;
-
   --border-color: #374151;
-
   --shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-
-
+/* =========================
+   RESET
+========================= */
 
 * {
   margin: 0;
@@ -46,666 +42,585 @@ body.dark-mode {
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
   font-family: Arial, Helvetica, sans-serif;
-
   background-color: var(--bg-color);
   color: var(--text-color);
-
   line-height: 1.6;
-
   transition:
     background-color var(--transition),
     color var(--transition);
-
-  overflow-x: hidden;
 }
-
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 
 a {
   text-decoration: none;
   color: inherit;
 }
 
-
 ul {
   list-style: none;
 }
 
+button,
+input,
+textarea {
+  font: inherit;
+}
 
-/* ========================================
+/* =========================
    HEADER
-======================================== */
+========================= */
 
 header {
   position: sticky;
   top: 0;
-
   z-index: 1000;
-
   background-color: var(--card-bg);
-
   border-bottom: 1px solid var(--border-color);
-
   box-shadow: var(--shadow);
 }
 
-
-/* ========================================
-   NAVBAR - FLEXBOX
-======================================== */
-
 nav {
-  width: min(100% - 2rem, 1200px);
-
+  max-width: 1200px;
   margin: auto;
-
   min-height: 70px;
+  padding: 0 20px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
-  gap: 1rem;
-
-  position: relative;
+  gap: 20px;
 }
-
 
 .logo {
   font-size: 1.5rem;
-
   font-weight: bold;
-
   color: var(--primary-color);
 }
 
-
-/* ========================================
-   MOBILE MENU BUTTON
-======================================== */
-
-#menu-toggle {
-  display: block;
-
-  background: transparent;
-
-  color: var(--text-color);
-
-  border: none;
-
-  font-size: 1.6rem;
-
-  cursor: pointer;
-
-  padding: 0.4rem;
-}
-
-
-/* ========================================
-   NAVIGATION MENU
-======================================== */
+/* =========================
+   NAVIGATION
+========================= */
 
 #nav-menu {
   display: none;
-
-  position: absolute;
-
-  top: 70px;
-
-  left: 0;
-
-  width: 100%;
-
-  padding: 1rem;
-
-  background-color: var(--card-bg);
-
-  border-bottom: 1px solid var(--border-color);
-
   flex-direction: column;
-
-  align-items: center;
-
-  gap: 1rem;
+  gap: 15px;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
 }
-
 
 #nav-menu.active {
   display: flex;
 }
 
-
 #nav-menu a {
   font-weight: 600;
-
   transition: color var(--transition);
 }
-
 
 #nav-menu a:hover {
   color: var(--primary-color);
 }
 
+/* =========================
+   MENU + THEME BUTTON
+========================= */
 
-/* ========================================
-   DARK MODE BUTTON
-======================================== */
+#menu-toggle,
+#theme-toggle {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+#menu-toggle {
+  font-size: 1.5rem;
+}
 
 #theme-toggle {
-  background: transparent;
-
-  color: var(--text-color);
-
-  border: none;
-
   font-size: 1.2rem;
-
-  cursor: pointer;
-
-  padding: 0.4rem;
-
-  transition: transform var(--transition);
 }
 
-
-#theme-toggle:hover {
-  transform: scale(1.15);
-}
-
-
-/* ========================================
-   COMMON SECTION
-======================================== */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section {
-  width: min(100% - 2rem, 1200px);
-
+  padding: 70px 20px;
+  max-width: 1200px;
   margin: auto;
-
-  padding: 4rem 0;
 }
 
+section:nth-child(even) {
+  background-color: var(--section-bg);
+}
 
-section h2 {
+h2 {
   text-align: center;
-
-  margin-bottom: 2rem;
-
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-size: 2rem;
+  margin-bottom: 35px;
 }
 
+h3 {
+  margin-bottom: 10px;
+}
 
-/* ========================================
-   HERO SECTION
-======================================== */
+/* =========================
+   HERO
+========================= */
 
 .hero {
-  width: 100%;
-
-  min-height: calc(100vh - 70px);
-
-  padding: 4rem 1rem;
-
-  background-color: var(--section-bg);
+  min-height: 80vh;
 
   display: grid;
-
   place-items: center;
-
   text-align: center;
 }
-
 
 .hero-content {
-  max-width: 800px;
-
-  margin: auto;
+  max-width: 700px;
 }
 
+.hero-subtitle {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
 .hero h1 {
-  font-size: clamp(2rem, 8vw, 4rem);
-
-  line-height: 1.1;
-
-  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
 }
-
 
 .hero p {
-  max-width: 700px;
-
-  margin: 0 auto 2rem;
-
   color: var(--secondary-text);
-
-  font-size: clamp(1rem, 3vw, 1.25rem);
+  margin-bottom: 25px;
 }
 
-
-/* ========================================
+/* =========================
    BUTTON
-======================================== */
+========================= */
 
-.btn,
-button[type="submit"] {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 0.8rem 1.3rem;
-
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: var(--radius);
   border: none;
-
-  border-radius: 8px;
-
   background-color: var(--primary-color);
-
-  color: #ffffff;
-
-  font-weight: 600;
-
+  color: white;
   cursor: pointer;
-
-  transition:
-    transform var(--transition),
-    background-color var(--transition);
+  transition: background-color var(--transition);
 }
 
-
-.btn:hover,
-button[type="submit"]:hover {
+.btn:hover {
   background-color: var(--primary-hover);
-
-  transform: translateY(-3px);
 }
 
+/* =========================
+   ABOUT
+========================= */
 
-/* ========================================
-   ABOUT - CSS GRID
-======================================== */
-
-#about {
+.about-grid {
   display: grid;
-
   grid-template-columns: 1fr;
-
-  gap: 1.5rem;
+  gap: 20px;
 }
 
-
-.about-content {
+.about-grid > div {
+  padding: 25px;
   background-color: var(--card-bg);
-
   border: 1px solid var(--border-color);
-
   border-radius: var(--radius);
-
-  padding: 2rem;
-
   box-shadow: var(--shadow);
-
-  transition:
-    transform var(--transition),
-    box-shadow var(--transition);
 }
 
+/* =========================
+   SKILLS
+========================= */
 
-.about-content:hover {
-  transform: translateY(-5px);
-}
-
-
-/* ========================================
-   SKILLS - CSS GRID
-======================================== */
-
-.skills-container {
+.skills-grid {
   display: grid;
-
   grid-template-columns: 1fr;
-
-  gap: 1rem;
+  gap: 20px;
 }
 
-
-.skill {
-  min-height: 100px;
-
-  padding: 1.5rem;
-
+.skill-card {
+  padding: 25px;
   background-color: var(--card-bg);
-
   border: 1px solid var(--border-color);
-
   border-radius: var(--radius);
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
-
   box-shadow: var(--shadow);
-
-  transition:
-    transform var(--transition),
-    box-shadow var(--transition);
 }
 
-
-.skill:hover {
-  transform: translateY(-7px);
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.skill-card p {
+  color: var(--secondary-text);
 }
 
+/* =========================
+   PROJECTS
+========================= */
 
-.skill h3 {
-  color: var(--primary-color);
-}
-
-
-/* ========================================
-   PROJECTS - CSS GRID
-======================================== */
-
-.projects-container {
+.projects-grid {
   display: grid;
-
   grid-template-columns: 1fr;
-
-  gap: 1.5rem;
+  gap: 20px;
 }
-
 
 .project-card {
+  padding: 25px;
   background-color: var(--card-bg);
-
   border: 1px solid var(--border-color);
-
   border-radius: var(--radius);
-
-  padding: 1.5rem;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 1rem;
-
   box-shadow: var(--shadow);
-
-  transition:
-    transform var(--transition),
-    box-shadow var(--transition);
 }
-
-
-.project-card:hover {
-  transform: translateY(-8px);
-
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-
-.project-card h3 {
-  color: var(--primary-color);
-
-  font-size: 1.3rem;
-}
-
 
 .project-card p {
   color: var(--secondary-text);
-
-  flex-grow: 1;
 }
 
+/* =========================
+   TODO LIST
+========================= */
 
-/* ========================================
-   CONTACT SECTION
-======================================== */
-
-#contact {
-  width: 100%;
-
-  max-width: none;
-
-  padding-left: 1rem;
-
-  padding-right: 1rem;
-
+#tasks {
   background-color: var(--section-bg);
 }
 
-
-#contact h2 {
-  max-width: 1200px;
-
-  margin-left: auto;
-
-  margin-right: auto;
+.section-description {
+  text-align: center;
+  color: var(--secondary-text);
+  margin-top: -20px;
+  margin-bottom: 30px;
 }
 
-
-form {
-  max-width: 700px;
-
+.todo-container {
+  max-width: 750px;
   margin: auto;
+  padding: 25px;
 
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 0.7rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
+/* Task Form */
 
-label {
+#todo-form label {
+  display: block;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 
+.todo-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-input,
-textarea {
+#todo-input {
   width: 100%;
-
-  padding: 0.9rem;
+  padding: 12px 14px;
 
   border: 1px solid var(--border-color);
+  border-radius: var(--radius);
 
-  border-radius: 8px;
-
-  background-color: var(--card-bg);
-
+  background-color: var(--bg-color);
   color: var(--text-color);
 
-  font: inherit;
+  outline: none;
 }
 
-
-textarea {
-  min-height: 150px;
-
-  resize: vertical;
+#todo-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
 }
 
+#add-task {
+  padding: 12px 20px;
 
-input:focus,
-textarea:focus {
-  outline: 2px solid var(--primary-color);
+  border: none;
+  border-radius: var(--radius);
 
-  outline-offset: 2px;
+  background-color: var(--primary-color);
+  color: white;
+
+  cursor: pointer;
+  transition: background-color var(--transition);
 }
 
+#add-task:hover {
+  background-color: var(--primary-hover);
+}
 
-/* ========================================
+/* =========================
+   TODO FILTERS
+========================= */
+
+.todo-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.filter-btn {
+  padding: 9px 16px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+
+  background-color: transparent;
+  color: var(--text-color);
+
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* =========================
+   TODO ITEMS
+========================= */
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px;
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+
+  background-color: var(--bg-color);
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.todo-text {
+  flex: 1;
+  word-break: break-word;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-actions button {
+  padding: 7px 10px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+
+  background-color: transparent;
+  color: var(--text-color);
+
+  cursor: pointer;
+}
+
+.todo-actions button:hover {
+  background-color: var(--section-bg);
+}
+
+.edit-btn {
+  color: var(--primary-color);
+}
+
+.delete-btn {
+  color: #dc2626;
+}
+
+/* =========================
+   TASK COUNT
+========================= */
+
+.task-count {
+  margin-top: 20px;
+  color: var(--secondary-text);
+  text-align: center;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact-form {
+  max-width: 700px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+}
+
+/* =========================
    FOOTER
-======================================== */
+========================= */
 
 footer {
-  padding: 2rem 1rem;
-
+  padding: 25px 20px;
   text-align: center;
 
   background-color: var(--card-bg);
-
   border-top: 1px solid var(--border-color);
 
   color: var(--secondary-text);
 }
 
-
-/* ========================================
-   TABLET - 600px
-======================================== */
+/* =========================
+   TABLET
+========================= */
 
 @media (min-width: 600px) {
-
-  nav {
-    width: min(100% - 3rem, 1200px);
-  }
-
 
   #menu-toggle {
     display: none;
   }
 
+  nav {
+    justify-content: space-between;
+  }
 
   #nav-menu {
-    display: flex;
-
     position: static;
-
     width: auto;
 
-    padding: 0;
-
-    border: none;
-
+    display: flex;
     flex-direction: row;
 
+    padding: 0;
+    border: none;
     background: transparent;
-
-    gap: 1.5rem;
   }
 
-
-  #about {
+  .about-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-
-  .skills-container {
+  .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-
-  .projects-container {
+  .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-
-  section {
-    width: min(100% - 3rem, 1200px);
+  .todo-input-group {
+    flex-direction: row;
   }
+
+  #todo-input {
+    flex: 1;
+  }
+
 }
 
-
-/* ========================================
-   DESKTOP - 900px
-======================================== */
+/* =========================
+   DESKTOP
+========================= */
 
 @media (min-width: 900px) {
 
-  nav {
-    min-height: 80px;
-  }
-
-
-  #nav-menu {
-    gap: 2rem;
-  }
-
-
-  section {
-    padding: 5rem 0;
-  }
-
-
-  .hero {
-    min-height: calc(100vh - 80px);
-  }
-
-
-  .skills-container {
+  .skills-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-
-  .projects-container {
+  .projects-grid {
     grid-template-columns: repeat(3, 1fr);
-
-    gap: 2rem;
   }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
 }
 
-
-/* ========================================
-   LARGE DESKTOP - 1200px
-======================================== */
+/* =========================
+   LARGE DESKTOP
+========================= */
 
 @media (min-width: 1200px) {
 
   section {
-    width: 1200px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
-
-  .hero {
-    padding: 6rem 2rem;
-  }
 }
 
-
-/* ========================================
+/* =========================
    ACCESSIBILITY
-======================================== */
+========================= */
 
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
   outline: 3px solid var(--primary-color);
-
   outline-offset: 3px;
 }
 
-
-/* ========================================
+/* =========================
    REDUCED MOTION
-======================================== */
+========================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -713,12 +628,10 @@ textarea:focus-visible {
     scroll-behavior: auto;
   }
 
-
   *,
   *::before,
   *::after {
     transition: none !important;
-
-    animation: none !important;
   }
+
 }
