@@ -1,99 +1,307 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-    <meta name="description"
-          content="Personal portfolio website showcasing skills, projects, and contact information.">
+  <meta
+    name="description"
+    content="Thiranex Portfolio - A responsive and accessible portfolio website."
+  >
 
-    <meta name="keywords"
-          content="portfolio, web developer, HTML, CSS, JavaScript, projects">
+  <meta
+    name="keywords"
+    content="portfolio, web developer, Thiranex, HTML, CSS, JavaScript"
+  >
 
-    <meta name="author" content="Your Name">
+  <meta name="author" content="Thiranex">
 
-    <title>My Portfolio | Home</title>
+  <title>Thiranex Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <a class="skip-link" href="#main-content">
-        Skip to main content
-    </a>
+  <!-- Header -->
+  <header>
+    <nav aria-label="Main Navigation">
 
-    <header>
-        <nav aria-label="Main navigation">
+      <div class="logo">
+        Thiranex
+      </div>
 
-            <a href="index.html" class="logo">
-                My Portfolio
-            </a>
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
 
-            <ul>
-                <li>
-                    <a href="index.html" aria-current="page">Home</a>
-                </li>
+      <!-- Navigation Links -->
+      <ul id="nav-menu">
 
-                <li>
-                    <a href="about.html">About</a>
-                </li>
+        <li>
+          <a href="#home">Home</a>
+        </li>
 
-                <li>
-                    <a href="projects.html">Projects</a>
-                </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
 
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
 
-        </nav>
-    </header>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
 
-    <main id="main-content">
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
 
-        <section class="hero" aria-labelledby="hero-title">
+      </ul>
 
-            <div>
-                <p>Hello, I'm</p>
+      <!-- Theme Button -->
+      <button
+        id="theme-toggle"
+        aria-label="Toggle dark mode"
+      >
+        🌙
+      </button>
 
-                <h1 id="hero-title">HARSHINI P</h1>
+    </nav>
+  </header>
 
-                <p>
-                    A passionate web developer interested in creating
-                    accessible and user-friendly websites.
-                </p>
 
-                <a href="projects.html" class="button">
-                    View My Projects
-                </a>
-            </div>
+  <!-- Main Content -->
+  <main>
 
-        </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
 
-        <section aria-labelledby="skills-title">
+      <div class="hero-content">
 
-            <h2 id="skills-title">My Skills</h2>
+        <h1>
+          Welcome to My Portfolio
+        </h1>
 
-            <ul class="skills-list">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Python</li>
-            </ul>
-
-        </section>
-
-    </main>
-
-    <footer>
         <p>
-            &copy; 2026 Your Name. All rights reserved.
+          I am a passionate developer interested in
+          creating modern, responsive and accessible
+          web experiences.
         </p>
-    </footer>
+
+        <a href="#projects" class="btn">
+          View My Projects
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about">
+
+      <div class="about-content">
+
+        <h2>About Me</h2>
+
+        <p>
+          I am a passionate learner and developer who
+          enjoys building responsive and user-friendly
+          websites using modern web technologies.
+        </p>
+
+      </div>
+
+      <div class="about-content">
+
+        <h2>My Goal</h2>
+
+        <p>
+          My goal is to continuously improve my technical
+          skills and create meaningful digital solutions.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+
+      <h2>My Skills</h2>
+
+      <div class="skills-container">
+
+        <div class="skill">
+          <h3>HTML5</h3>
+        </div>
+
+        <div class="skill">
+          <h3>CSS3</h3>
+        </div>
+
+        <div class="skill">
+          <h3>JavaScript</h3>
+        </div>
+
+        <div class="skill">
+          <h3>Responsive Design</h3>
+        </div>
+
+        <div class="skill">
+          <h3>Git & GitHub</h3>
+        </div>
+
+        <div class="skill">
+          <h3>Web Accessibility</h3>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+
+      <h2>My Projects</h2>
+
+      <div class="projects-container">
+
+        <article class="project-card">
+
+          <h3>Project One</h3>
+
+          <p>
+            A responsive web project created using
+            modern HTML and CSS techniques.
+          </p>
+
+          <a href="#" class="btn">
+            View Project
+          </a>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <h3>Project Two</h3>
+
+          <p>
+            A user-friendly web application designed
+            with responsive layouts.
+          </p>
+
+          <a href="#" class="btn">
+            View Project
+          </a>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <h3>Project Three</h3>
+
+          <p>
+            A modern portfolio project demonstrating
+            CSS Grid, Flexbox and responsive design.
+          </p>
+
+          <a href="#" class="btn">
+            View Project
+          </a>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+      <h2>Contact Me</h2>
+
+      <form>
+
+        <label for="name">
+          Name
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        >
+
+
+        <label for="email">
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        >
+
+
+        <label for="message">
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Enter your message"
+          required
+        ></textarea>
+
+
+        <button type="submit">
+          Send Message
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+
+    <p>
+      &copy; 2026 Thiranex. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 
 </body>
 </html>
+```
