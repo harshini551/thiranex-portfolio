@@ -6,12 +6,12 @@
 
   <meta
     name="description"
-    content="Thiranex responsive portfolio website with interactive task management application."
+    content="Thiranex responsive portfolio with interactive task and weather applications."
   >
 
   <meta
     name="keywords"
-    content="Thiranex, portfolio, web development, JavaScript, responsive design, todo list"
+    content="Thiranex, portfolio, web development, JavaScript, weather dashboard"
   >
 
   <meta name="author" content="Thiranex">
@@ -31,7 +31,7 @@
         Thiranex
       </div>
 
-      <!-- Mobile Menu Button -->
+      <!-- Mobile Menu -->
       <button
         id="menu-toggle"
         aria-label="Open navigation menu"
@@ -40,13 +40,14 @@
         ☰
       </button>
 
-      <!-- Navigation Links -->
+      <!-- Navigation -->
       <ul id="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#tasks">Tasks</a></li>
+        <li><a href="#weather">Weather</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
@@ -62,10 +63,10 @@
   </header>
 
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
 
       <div class="hero-content">
@@ -92,7 +93,7 @@
     </section>
 
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about">
 
       <h2>About Me</h2>
@@ -118,7 +119,7 @@
     </section>
 
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section id="skills">
 
       <h2>Skills</h2>
@@ -150,7 +151,7 @@
     </section>
 
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects">
 
       <h2>Projects</h2>
@@ -186,7 +187,10 @@
     </section>
 
 
-    <!-- NEW: To-Do List Section -->
+    <!-- =========================
+         TODO LIST
+    ========================== -->
+
     <section id="tasks">
 
       <h2>My Tasks</h2>
@@ -197,7 +201,6 @@
 
       <div class="todo-container">
 
-        <!-- Add Task -->
         <form id="todo-form">
 
           <label for="todo-input">
@@ -223,8 +226,11 @@
         </form>
 
 
-        <!-- Task Filters -->
-        <div class="todo-filters" aria-label="Task filters">
+        <!-- Filters -->
+        <div
+          class="todo-filters"
+          aria-label="Task filters"
+        >
 
           <button
             type="button"
@@ -263,7 +269,10 @@
 
 
         <!-- Task Count -->
-        <p id="task-count" class="task-count">
+        <p
+          id="task-count"
+          class="task-count"
+        >
           0 tasks
         </p>
 
@@ -272,7 +281,157 @@
     </section>
 
 
-    <!-- Contact Section -->
+    <!-- =========================
+         WEATHER DASHBOARD
+    ========================== -->
+
+    <section id="weather">
+
+      <h2>Weather Dashboard</h2>
+
+      <p class="section-description">
+        Search for a city to view real-time weather information.
+      </p>
+
+      <div class="weather-container">
+
+        <!-- Search -->
+        <form id="weather-form">
+
+          <label for="city-input">
+            Enter City Name
+          </label>
+
+          <div class="weather-search">
+
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Enter city name..."
+              autocomplete="off"
+              required
+            >
+
+            <button
+              type="submit"
+              id="weather-search-btn"
+            >
+              Search
+            </button>
+
+          </div>
+
+        </form>
+
+
+        <!-- Loading Message -->
+        <p
+          id="weather-loading"
+          class="weather-loading"
+          hidden
+        >
+          Loading weather data...
+        </p>
+
+
+        <!-- Error Message -->
+        <p
+          id="weather-error"
+          class="weather-error"
+          role="alert"
+          hidden
+        >
+        </p>
+
+
+        <!-- Weather Result -->
+        <div
+          id="weather-result"
+          class="weather-result"
+          hidden
+        >
+
+          <div class="weather-header">
+
+            <h3 id="weather-city">
+              City
+            </h3>
+
+            <p id="weather-description">
+              Weather
+            </p>
+
+          </div>
+
+
+          <div class="weather-main">
+
+            <p
+              id="weather-temperature"
+              class="weather-temperature"
+            >
+              --°C
+            </p>
+
+          </div>
+
+
+          <div class="weather-details">
+
+            <div class="weather-card">
+
+              <span class="weather-icon">
+                💧
+              </span>
+
+              <h4>Humidity</h4>
+
+              <p id="weather-humidity">
+                --%
+              </p>
+
+            </div>
+
+
+            <div class="weather-card">
+
+              <span class="weather-icon">
+                💨
+              </span>
+
+              <h4>Wind Speed</h4>
+
+              <p id="weather-wind">
+                -- km/h
+              </p>
+
+            </div>
+
+
+            <div class="weather-card">
+
+              <span class="weather-icon">
+                🌡️
+              </span>
+
+              <h4>Temperature</h4>
+
+              <p id="weather-temp-detail">
+                --°C
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Contact -->
     <section id="contact">
 
       <h2>Contact Me</h2>
@@ -327,7 +486,10 @@
         </div>
 
 
-        <button type="submit" class="btn">
+        <button
+          type="submit"
+          class="btn"
+        >
           Send Message
         </button>
 

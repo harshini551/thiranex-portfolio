@@ -51,6 +51,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
+
   transition:
     background-color var(--transition),
     color var(--transition);
@@ -79,8 +80,10 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+
   background-color: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
+
   box-shadow: var(--shadow);
 }
 
@@ -93,6 +96,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 20px;
 }
 
@@ -108,13 +112,18 @@ nav {
 
 #nav-menu {
   display: none;
+
   flex-direction: column;
   gap: 15px;
+
   width: 100%;
+
   position: absolute;
   top: 70px;
   left: 0;
+
   padding: 20px;
+
   background-color: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
 }
@@ -125,7 +134,9 @@ nav {
 
 #nav-menu a {
   font-weight: 600;
-  transition: color var(--transition);
+
+  transition:
+    color var(--transition);
 }
 
 #nav-menu a:hover {
@@ -133,14 +144,16 @@ nav {
 }
 
 /* =========================
-   MENU + THEME BUTTON
+   MENU + THEME
 ========================= */
 
 #menu-toggle,
 #theme-toggle {
   border: none;
   background: transparent;
+
   cursor: pointer;
+
   color: var(--text-color);
 }
 
@@ -157,9 +170,10 @@ nav {
 ========================= */
 
 section {
-  padding: 70px 20px;
   max-width: 1200px;
   margin: auto;
+
+  padding: 70px 20px;
 }
 
 section:nth-child(even) {
@@ -168,7 +182,9 @@ section:nth-child(even) {
 
 h2 {
   text-align: center;
+
   font-size: 2rem;
+
   margin-bottom: 35px;
 }
 
@@ -185,6 +201,7 @@ h3 {
 
   display: grid;
   place-items: center;
+
   text-align: center;
 }
 
@@ -195,16 +212,19 @@ h3 {
 .hero-subtitle {
   color: var(--primary-color);
   font-weight: bold;
+
   margin-bottom: 10px;
 }
 
 .hero h1 {
   font-size: 2.2rem;
+
   margin-bottom: 20px;
 }
 
 .hero p {
   color: var(--secondary-text);
+
   margin-bottom: 25px;
 }
 
@@ -214,13 +234,19 @@ h3 {
 
 .btn {
   display: inline-block;
+
   padding: 12px 22px;
-  border-radius: var(--radius);
+
   border: none;
+  border-radius: var(--radius);
+
   background-color: var(--primary-color);
   color: white;
+
   cursor: pointer;
-  transition: background-color var(--transition);
+
+  transition:
+    background-color var(--transition);
 }
 
 .btn:hover {
@@ -233,15 +259,20 @@ h3 {
 
 .about-grid {
   display: grid;
+
   grid-template-columns: 1fr;
+
   gap: 20px;
 }
 
 .about-grid > div {
   padding: 25px;
+
   background-color: var(--card-bg);
+
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
+
   box-shadow: var(--shadow);
 }
 
@@ -251,15 +282,20 @@ h3 {
 
 .skills-grid {
   display: grid;
+
   grid-template-columns: 1fr;
+
   gap: 20px;
 }
 
 .skill-card {
   padding: 25px;
+
   background-color: var(--card-bg);
+
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
+
   box-shadow: var(--shadow);
 }
 
@@ -273,15 +309,20 @@ h3 {
 
 .projects-grid {
   display: grid;
+
   grid-template-columns: 1fr;
+
   gap: 20px;
 }
 
 .project-card {
   padding: 25px;
+
   background-color: var(--card-bg);
+
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
+
   box-shadow: var(--shadow);
 }
 
@@ -299,7 +340,9 @@ h3 {
 
 .section-description {
   text-align: center;
+
   color: var(--secondary-text);
+
   margin-top: -20px;
   margin-bottom: 30px;
 }
@@ -307,30 +350,36 @@ h3 {
 .todo-container {
   max-width: 750px;
   margin: auto;
+
   padding: 25px;
 
   background-color: var(--card-bg);
+
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
+
   box-shadow: var(--shadow);
 }
 
-/* Task Form */
-
 #todo-form label {
   display: block;
+
   margin-bottom: 8px;
+
   font-weight: 600;
 }
 
 .todo-input-group {
   display: flex;
+
   flex-direction: column;
+
   gap: 10px;
 }
 
 #todo-input {
   width: 100%;
+
   padding: 12px 14px;
 
   border: 1px solid var(--border-color);
@@ -344,7 +393,6 @@ h3 {
 
 #todo-input:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
 }
 
 #add-task {
@@ -357,21 +405,15 @@ h3 {
   color: white;
 
   cursor: pointer;
-  transition: background-color var(--transition);
 }
-
-#add-task:hover {
-  background-color: var(--primary-hover);
-}
-
-/* =========================
-   TODO FILTERS
-========================= */
 
 .todo-filters {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 10px;
+
   margin: 25px 0;
 }
 
@@ -385,29 +427,29 @@ h3 {
   color: var(--text-color);
 
   cursor: pointer;
-  transition: all var(--transition);
 }
 
 .filter-btn:hover,
 .filter-btn.active {
   background-color: var(--primary-color);
   color: white;
+
   border-color: var(--primary-color);
 }
 
-/* =========================
-   TODO ITEMS
-========================= */
-
 .todo-list {
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
 }
 
 .todo-item {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
 
   padding: 15px;
@@ -420,22 +462,26 @@ h3 {
 
 .todo-item.completed .todo-text {
   text-decoration: line-through;
+
   opacity: 0.6;
 }
 
 .todo-checkbox {
   width: 18px;
   height: 18px;
+
   cursor: pointer;
 }
 
 .todo-text {
   flex: 1;
+
   word-break: break-word;
 }
 
 .todo-actions {
   display: flex;
+
   gap: 8px;
 }
 
@@ -451,10 +497,6 @@ h3 {
   cursor: pointer;
 }
 
-.todo-actions button:hover {
-  background-color: var(--section-bg);
-}
-
 .edit-btn {
   color: var(--primary-color);
 }
@@ -463,14 +505,201 @@ h3 {
   color: #dc2626;
 }
 
-/* =========================
-   TASK COUNT
-========================= */
-
 .task-count {
   margin-top: 20px;
+
   color: var(--secondary-text);
+
   text-align: center;
+}
+
+/* =========================
+   WEATHER DASHBOARD
+========================= */
+
+#weather {
+  background-color: var(--bg-color);
+}
+
+.weather-container {
+  max-width: 800px;
+  margin: auto;
+
+  padding: 25px;
+
+  background-color: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+/* Weather Search */
+
+#weather-form label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: 600;
+}
+
+.weather-search {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+#city-input {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  outline: none;
+}
+
+#city-input:focus {
+  border-color: var(--primary-color);
+
+  box-shadow:
+    0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+#weather-search-btn {
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: var(--radius);
+
+  background-color: var(--primary-color);
+  color: white;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition);
+}
+
+#weather-search-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Loading */
+
+.weather-loading {
+  margin-top: 25px;
+
+  text-align: center;
+
+  color: var(--secondary-text);
+}
+
+/* Error */
+
+.weather-error {
+  margin-top: 20px;
+
+  padding: 12px;
+
+  border-radius: var(--radius);
+
+  background-color: #fee2e2;
+  color: #b91c1c;
+
+  text-align: center;
+}
+
+/* Weather Result */
+
+.weather-result {
+  margin-top: 30px;
+
+  padding: 25px;
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+
+  background-color: var(--section-bg);
+}
+
+.weather-header {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.weather-header h3 {
+  font-size: 1.6rem;
+
+  color: var(--primary-color);
+}
+
+.weather-header p {
+  color: var(--secondary-text);
+}
+
+.weather-main {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.weather-temperature {
+  font-size: 3rem;
+
+  font-weight: bold;
+
+  color: var(--text-color);
+}
+
+/* Weather Details */
+
+.weather-details {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 15px;
+}
+
+.weather-card {
+  padding: 20px;
+
+  text-align: center;
+
+  background-color: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+.weather-icon {
+  display: block;
+
+  font-size: 2rem;
+
+  margin-bottom: 8px;
+}
+
+.weather-card h4 {
+  margin-bottom: 5px;
+}
+
+.weather-card p {
+  color: var(--secondary-text);
+
+  font-weight: bold;
 }
 
 /* =========================
@@ -479,6 +708,7 @@ h3 {
 
 #contact-form {
   max-width: 700px;
+
   margin: auto;
 }
 
@@ -488,13 +718,16 @@ h3 {
 
 .form-group label {
   display: block;
+
   margin-bottom: 8px;
+
   font-weight: 600;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
+
   padding: 12px 14px;
 
   border: 1px solid var(--border-color);
@@ -517,9 +750,11 @@ h3 {
 
 footer {
   padding: 25px 20px;
+
   text-align: center;
 
   background-color: var(--card-bg);
+
   border-top: 1px solid var(--border-color);
 
   color: var(--secondary-text);
@@ -535,19 +770,19 @@ footer {
     display: none;
   }
 
-  nav {
-    justify-content: space-between;
-  }
-
   #nav-menu {
     position: static;
+
     width: auto;
 
     display: flex;
+
     flex-direction: row;
 
     padding: 0;
+
     border: none;
+
     background: transparent;
   }
 
@@ -569,6 +804,18 @@ footer {
 
   #todo-input {
     flex: 1;
+  }
+
+  .weather-search {
+    flex-direction: row;
+  }
+
+  #city-input {
+    flex: 1;
+  }
+
+  .weather-details {
+    grid-template-columns: repeat(3, 1fr);
   }
 
 }
